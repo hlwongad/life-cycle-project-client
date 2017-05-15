@@ -18,9 +18,6 @@
   "scripts": {
     "build": "webpack",
     "watch": "webpack --watch",
-    "server": "webpack-dev-server --hot --inline",
-    "start": "webpack-dev-server --hot --inline && webpack --watch",
-    "execute": "webpack & webpack-dev-server --hot --inline && webpack --watch",
     "clean": "rimraf www/build/*",
     "minify": "uglifyjs2 www/build/app.bundle.js -o www/build/app.bundle.min.js",
     "publish": "npm run clean && npm run build && npm run minify && ./deploy.sh",
