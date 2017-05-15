@@ -6,9 +6,7 @@ export default class AjaxHandler {
 		this.jQuery = jQuery;
 	}
 
-    ajaxGet(path, data){
-        jQuery.get(API_HOST + path, data, function(res){
-            return res;
-        });
+    ajaxGet(path, data, trackback){
+        jQuery.get(API_HOST + path, data, trackback);
     }
 }
