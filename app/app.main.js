@@ -7,7 +7,9 @@ import AjaxHandler from './AjaxHandler.js';
     var ajaxHandler = new AjaxHandler(jQuery);
 		var numberId = $("#numberId").val();
         ajaxHandler.ajaxGet("/api/customer/name", {cid: numberId}, function( result ){ 
-    		$("#nameresult").html(result)
+        	console.log(result);
+        	var name = result.recordset[0].CustomerName;
+    		$("#nameresult").text(name);
         })
     });
 
