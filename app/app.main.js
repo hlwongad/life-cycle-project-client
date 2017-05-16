@@ -3,9 +3,9 @@ import AjaxHandler from './AjaxHandler.js';
 
 (function() {
 
-	$("#submitId").onclick(function(){
+	$("#submitId").click(function(){
     var ajaxHandler = new AjaxHandler(jQuery);
-		var numberId = $("#numberId");
+		var numberId = $("#numberId").val();
         ajaxHandler.ajaxGet("/api/customer/name", {cid: numberId}, function( result ){ 
     		$("#nameresult").html(result)
         })
