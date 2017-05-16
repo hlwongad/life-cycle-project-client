@@ -10,9 +10,9 @@ import AjaxHandler from './AjaxHandler.js';
 
 
 	    ajaxHandler.ajaxGet("/api/customer/name", {cid: numberId}, function( result ){ 
-	    	console.log(result);
-	    	var name = result.recordset[0].CustomerName;
-			document.getElementById("nameresult").innerHTML = name;
+	    	if(result.name){
+				document.getElementById("nameresult").innerHTML = result.name;
+			}
 	    })
     });
 
